@@ -1,33 +1,69 @@
 //GSAP for scrolling portfolio
-let scrollTl = gsap.timeline({
+$(".main-wrap.scrolling-prtfl").each(function () {
+  let scrollPrtfl = gsap.timeline({
     scrollTrigger: {
-    trigger: ".main-wrap.scrolling-prtfl",
-    start: "top 15%",
-    end: "105% bottom",
-    markers: true,
-    scrub: true,
+      trigger: $(this),
+      start: "top 15%",
+      end: "bottom bottom",
+      markers: true,
+      scrub: true,
     },
-});
-scrollTl.to(".scrolling-prtfl-sticky-wrap", { x: "-100%", duration: 0.8 });
+  });
+  scrollPrtfl.to($(this).find(".scrolling-prtfl-clw"), { x: "-100%", duration: 0.8 });
+  scrollPrtfl.from($(this).find(".scrolling-bar-toggle"), {x: "-100%", duration: 0.8}, 0);
+})
+
+
 
 function setTrackHeights() {
-    $(".container.scrolling-prtfl-wrap").each(function (index) {
-      let trackWidth = $(this).find(".scrolling-prtfl-list").outerWidth();
-      let desiredHeight = trackWidth - $(window).width();
-      $(this).height(desiredHeight);
-      console.log(desiredHeight);
-    });
-    
-
-  }
-  setTrackHeights();
-  window.addEventListener("resize", function () {
-    setTrackHeights();
+  $(".container.scrolling-prtfl-wrap").each(function (index) {
+    let trackWidth = $(this).find(".scrolling-prtfl-clw").outerWidth();
+    //let desiredHeight = trackWidth - $(window).width();
+    $(this).height(trackWidth);
+    console.log(trackWidth);
   });
+  
 
+}
+setTrackHeights();
+window.addEventListener("resize", function () {
+  setTrackHeights();
+});
 
-
-
+//SWIPER
+$(".container.slider-galery-comp").each(function (index){
+  const swiperBg = new Swiper($(this).find(".swiper.is-slider-bg")[0], {
+    slidesPerView: 1,
+    speed: 1200,
+    //keyboard: true,
+    //effect: "coverflow",
+    //coverflowEffect:{
+    //  depth: 100,
+    //  rotate: 30,
+    //  scale: 0.9,
+    //  slideShadow: false
+    //}
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+  });
+  const swiperTitle = new Swiper($(this).find(".swiper.is-slider-title")[0], {
+    slidesPerView: 1,
+    speed: 800,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    thumbs:{
+      swiper: swiperBg
+    },
+    navigation:{
+      nextEl: $(this).find(".button.for-slide.swiper-next")[0],
+      prevEl: $(this).find(".button.for-slide.swiper-prev")[0],
+    }
+  });
+})
 
 
 //GSAP for last section
