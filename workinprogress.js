@@ -1,3 +1,64 @@
+//MANIPULATION WITH OBJECTS
+//add active class from cases
+$(document).ready(function() {
+  $('.slider-objects-mod-cli').removeClass('active');
+  $('.main-wrap.obj-mod').removeClass('active');
+  $('.modal-w-objects').removeClass('active');
+});
+$('.circle-hover.obj-crcl').on('click', function() {
+  let objIndex = $(this).closest('.swiper-slide.is-slider-title').index();
+  $('.slider-objects-mod-cli').eq(objIndex).addClass('active');
+  
+  setTimeout(function() {
+    $('.main-wrap.obj-mod').addClass('active');
+    $('.modal-w-objects').addClass('active');
+    console.log("Index clicked: " + objIndex);
+  }, 10); // 10 milliseconds = 0.01 seconds
+});
+//remove active class from cases
+$('.close-wrap, .modal-cases-bg').on('click', function() {
+    $('.main-wrap.obj-mod').removeClass('active');
+    $('.modal-w-objects').removeClass('active');  
+    setTimeout(function() {
+      $('.slider-objects-mod-cli').removeClass('active');
+    }, 800);
+});
+
+
+//MANIPULATION WITH CASES
+//add active class from cases
+$(document).ready(function() {
+  $('.scrolling-prtfl-mod-cli').removeClass('active');
+  $('.main-wrap.cases-mod').removeClass('active');
+  $('.modal-w-case').removeClass('active');
+});
+$('.circle-hover.prtfl-crcl').on('click', function() {
+  let prtflIndex = $(this).closest('.scrolling-prtfl-cli').index();
+  $('.scrolling-prtfl-mod-cli').eq(prtflIndex).addClass('active');
+  
+  setTimeout(function() {
+    $('.main-wrap.cases-mod').addClass('active');
+    $('.modal-w-case').addClass('active');
+    console.log("Index clicked: " + prtflIndex);
+  }, 10); // 10 milliseconds = 0.01 seconds
+});
+//remove active class from cases
+$('.close-wrap, .modal-cases-bg').on('click', function() {
+    $('.main-wrap.cases-mod').removeClass('active');
+    $('.modal-w-case').removeClass('active');  
+    setTimeout(function() {
+      $('.scrolling-prtfl-mod-cli').removeClass('active');
+      $('.form-tab-link.first').click();
+    }, 800);
+});
+//simulate tab-click in cases
+$('.button.next-tab').on('click', function() {
+  let myIndex = $(this).closest('.scrolling-prtfl-mod-cli').index();
+  $('.form-tab-link.second').eq(myIndex).click();
+});
+
+
+
 //GSAP for scrolling portfolio
 $(".main-wrap.scrolling-prtfl").each(function () {
   let scrollPrtfl = gsap.timeline({
@@ -5,13 +66,18 @@ $(".main-wrap.scrolling-prtfl").each(function () {
       trigger: $(this),
       start: "top 15%",
       end: "bottom bottom",
-      markers: true,
+      //markers: true,
       scrub: true,
     },
   });
   scrollPrtfl.to($(this).find(".scrolling-prtfl-clw"), { x: "-100%", duration: 0.8 });
   scrollPrtfl.from($(this).find(".scrolling-bar-toggle"), {x: "-100%", duration: 0.8}, 0);
 })
+
+//Simulate form button click
+$('.button.form-cta').on('click', function() {
+  $(this).siblings('.form-native-button').click();
+});
 
 
 
