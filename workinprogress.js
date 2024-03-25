@@ -1,11 +1,12 @@
-//MANIPULATION WITH OBJECTS
-//add active class from cases
+
+//Open OBJECTS modal
+//add active class from objects
 $(document).ready(function() {
   $('.slider-objects-mod-cli').removeClass('active');
   $('.main-wrap.obj-mod').removeClass('active');
   $('.modal-w-objects').removeClass('active');
 });
-$('.circle-hover.obj-crcl').on('click', function() {
+$('.circle-hover.obj-crcl, .link-w-underline.objects-cta').on('click', function() {
   let objIndex = $(this).closest('.swiper-slide.is-slider-title').index();
   $('.slider-objects-mod-cli').eq(objIndex).addClass('active');
   
@@ -15,7 +16,7 @@ $('.circle-hover.obj-crcl').on('click', function() {
     console.log("Index clicked: " + objIndex);
   }, 10); // 10 milliseconds = 0.01 seconds
 });
-//remove active class from cases
+//remove active class from objects
 $('.close-wrap, .modal-cases-bg').on('click', function() {
     $('.main-wrap.obj-mod').removeClass('active');
     $('.modal-w-objects').removeClass('active');  
@@ -25,14 +26,14 @@ $('.close-wrap, .modal-cases-bg').on('click', function() {
 });
 
 
-//MANIPULATION WITH CASES
+//Open CASES modal
 //add active class from cases
 $(document).ready(function() {
   $('.scrolling-prtfl-mod-cli').removeClass('active');
   $('.main-wrap.cases-mod').removeClass('active');
   $('.modal-w-case').removeClass('active');
 });
-$('.circle-hover.prtfl-crcl').on('click', function() {
+$('.circle-hover.prtfl-crcl, .link-w-underline.cases-cta').on('click', function() {
   let prtflIndex = $(this).closest('.scrolling-prtfl-cli').index();
   $('.scrolling-prtfl-mod-cli').eq(prtflIndex).addClass('active');
   
@@ -57,44 +58,6 @@ $('.button.next-tab').on('click', function() {
   $('.form-tab-link.second').eq(myIndex).click();
 });
 
-
-
-//GSAP for scrolling portfolio
-$(".main-wrap.scrolling-prtfl").each(function () {
-  let scrollPrtfl = gsap.timeline({
-    scrollTrigger: {
-      trigger: $(this),
-      start: "top 15%",
-      end: "bottom bottom",
-      //markers: true,
-      scrub: true,
-    },
-  });
-  scrollPrtfl.to($(this).find(".scrolling-prtfl-clw"), { x: "-100%", duration: 0.8 });
-  scrollPrtfl.from($(this).find(".scrolling-bar-toggle"), {x: "-100%", duration: 0.8}, 0);
-})
-
-//Simulate form button click
-$('.button.form-cta').on('click', function() {
-  $(this).siblings('.form-native-button').click();
-});
-
-
-
-function setTrackHeights() {
-  $(".container.scrolling-prtfl-wrap").each(function (index) {
-    let trackWidth = $(this).find(".scrolling-prtfl-clw").outerWidth();
-    //let desiredHeight = trackWidth - $(window).width();
-    $(this).height(trackWidth);
-    console.log(trackWidth);
-  });
-  
-
-}
-setTrackHeights();
-window.addEventListener("resize", function () {
-  setTrackHeights();
-});
 
 //SWIPER
 $(".container.slider-galery-comp").each(function (index){
@@ -131,6 +94,59 @@ $(".container.slider-galery-comp").each(function (index){
   });
 })
 
+//Run on mobile only
+$(document).ready(function() {
+  console.log("Screen Width: " + screen.width);
+  console.log("Screen Height: " + screen.height);
+
+  if (
+    ((screen.width === 1024 && screen.height === 1366) ||
+    (screen.width === 1366 && screen.height === 1024)) ||
+    screen.width < 991
+  ) {
+    $('.link-p.nav-main').on('click', function() {
+      $('.nav-menu-btn-wrap').click();
+    });
+    console.log('Mobile code launched');
+  } else {
+  console.log('Web code launched');
+  //GSAP for scrolling portfolio
+$(".main-wrap.scrolling-prtfl").each(function () {
+  let scrollPrtfl = gsap.timeline({
+    scrollTrigger: {
+      trigger: $(this),
+      start: "top 5%",
+      end: "bottom bottom",
+      //markers: true,
+      scrub: true,
+    },
+  });
+  scrollPrtfl.to($(this).find(".scrolling-prtfl-clw"), { x: "-100%", duration: 0.8 });
+  scrollPrtfl.from($(this).find(".scrolling-bar-toggle"), {x: "-100%", duration: 0.8}, 0);
+})
+
+//Simulate form button click
+$('.button.form-cta').on('click', function() {
+  $(this).siblings('.form-native-button').click();
+});
+
+
+
+function setTrackHeights() {
+  $(".container.scrolling-prtfl-wrap").each(function (index) {
+    let trackWidth = $(this).find(".scrolling-prtfl-clw").outerWidth();
+    //let desiredHeight = trackWidth - $(window).width();
+    $(this).height(trackWidth);
+    console.log(trackWidth);
+  });
+  
+
+}
+setTrackHeights();
+window.addEventListener("resize", function () {
+  setTrackHeights();
+});
+
 
 //GSAP for last section
 $(".last-step-bl").each(function(){
@@ -146,6 +162,7 @@ $(".last-step-bl").each(function(){
     scrollLastSteps.from($(this).find(".last-step-cont"), {opacity: .3, duration: 0.6, ease: "power1.out",});
 })
 
+//WIDTH OF THREE IMAGES
 //first bl
 const tabBlock = document.querySelector('.tab-bl-wrap.first');
 const tabWidth = tabBlock.offsetWidth;
@@ -178,3 +195,8 @@ const childrenImageThird = tabsImageThird.querySelector('img');
 const leftPosition = finalPosition + tabWidthSecond;
 childrenImageThird.style.left = `-${leftPosition}px`;
 //console.log('-', leftPosition);
+}
+
+console.log('VS code launched');
+
+});

@@ -1,0 +1,268 @@
+/* SCROLLBAR */
+/*::-webkit-scrollbar-thumb:horizontal{
+    display: none !important;
+  }
+
+  .offer-tabs_menu::-webkit-scrollbar, .container.prtfl-height::-webkit-scrollbar, .partner-tabs-menu::-webkit-scrollbar{
+    display: none !important;
+  }
+
+  .offer-tabs_menu, .container.prtfl-height, .partner-tabs-menu{
+    scrollbar-width: none;
+  }*/
+
+  ::-webkit-scrollbar  {
+    width: 100%;
+    height: 2px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    /* border-radius: 100px; */
+    background: #74695B;
+  } 
+
+
+@media screen and (max-width: 991px) {
+    :root {
+        --additional--big-cta: 15rem;
+        --additional--modal-cont: 80%;
+        --additional--modal-img: 80%;
+        --additional--modal-wide: 80%;
+        --additional--circle-cta: 7.5rem;
+        --additional--slider-cta: 3rem;
+
+        --fonts--h1-24px: 1.5rem;
+        --fonts--h2-30px: 1.5rem;
+        --fonts--h3-18px: 1.125rem;
+        --fonts--h4-16px: 1rem;
+        --fonts--p-14px: 0.875rem;
+        --fonts--circle-button: 0.75rem;
+        --fonts--letter-space-2px: 0.125rem;
+
+        --global-spacing--8px: 0.5rem;
+        --global-spacing--12px: 0.75rem;
+        --global-spacing--16px: 1rem;
+        --global-spacing--20px: 1rem;
+        --global-spacing--24px: 1.25rem;
+        --global-spacing--32px: 1.5rem;
+        --global-spacing--40px: 2rem;
+        --global-spacing--48px: 2.5rem;
+        --global-spacing--64px: 3.5rem;
+        --global-spacing--72px: 4.5rem;
+        --global-spacing--80px: 4.5rem;
+        --global-spacing--120px: 5rem;
+        --global-spacing--136px: 5rem;
+        --global-spacing--global-right-128px: 2rem;
+        --global-spacing--global-left-240px: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --additional--big-cta: calc(18.75rem * 1024 / 1440);
+        --additional--modal-cont: calc(36rem * 1024 / 1440);
+        --additional--modal-img: calc(24rem * 1024 / 1440);
+        --additional--modal-wide: calc(42rem * 1024 / 1440);
+        --additional--circle-cta: calc(7.2rem * 1024 / 1440);
+        --additional--slider-cta: calc(3rem * 1024 / 1440);
+
+        --fonts--h1-24px: calc(1.5rem * 1024 / 1440);
+        --fonts--h2-30px: calc(1.875rem * 1024 / 1440);
+        --fonts--h3-18px: calc(1.125rem * 1024 / 1440);
+        --fonts--h4-16px: calc(1rem * 1024 / 1440);
+        --fonts--p-14px: calc(0.875rem * 1024 / 1440);
+        --fonts--circle-button: calc(0.75rem * 1024 / 1440);
+        --fonts--letter-space-2px: calc(0.125rem * 1024 / 1440);
+
+        --global-spacing--8px: calc(0.5rem * 1024 / 1440);
+        --global-spacing--12px: calc(0.75rem * 1024 / 1440);
+        --global-spacing--16px: calc(1rem * 1024 / 1440);
+        --global-spacing--20px: calc(1.25rem * 1024 / 1440);
+        --global-spacing--24px: calc(1.5rem * 1024 / 1440);
+        --global-spacing--32px: calc(2rem * 1024 / 1440);
+        --global-spacing--40px: calc(2.5rem * 1024 / 1440);
+        --global-spacing--48px: calc(3rem * 1024 / 1440);
+        --global-spacing--64px: calc(4rem * 1024 / 1440);
+        --global-spacing--72px: calc(4.5rem * 1024 / 1440);
+        --global-spacing--80px: calc(5rem * 1024 / 1440);
+        --global-spacing--120px: calc(7.5rem * 1024 / 1440);
+        --global-spacing--136px: calc(8.5rem * 1024 / 1440);
+        --global-spacing--global-right-128px: calc(8rem * 1024 / 1440);
+        --global-spacing--global-left-240px: calc(15rem * 1024 / 1440);
+    }
+}
+@media screen and (min-width: 1200px) {
+    :root {
+        --additional--big-cta: calc(18.75rem * 1200 / 1440);
+        --additional--modal-cont: calc(36rem * 1200 / 1440);
+        --additional--modal-img: calc(24rem * 1200 / 1440);
+        --additional--modal-wide: calc(42rem * 1200 / 1440);
+        --additional--circle-cta: calc(7.2rem * 1200 / 1440);
+        --additional--slider-cta: calc(3rem * 1200 / 1440);
+
+        --fonts--h1-24px: calc(1.5rem * 1200 / 1440);
+        --fonts--h2-30px: calc(1.875rem * 1200 / 1440);
+        --fonts--h3-18px: calc(1.125rem * 1200 / 1440);
+        --fonts--h4-16px: calc(1rem * 1200 / 1440);
+        --fonts--p-14px: calc(0.875rem * 1200 / 1440);
+        --fonts--circle-button: calc(0.75rem * 1200 / 1440);
+        --fonts--letter-space-2px: calc(0.125rem * 1200 / 1440);
+
+        --global-spacing--8px: calc(0.5rem * 1200 / 1440);
+        --global-spacing--12px: calc(0.75rem * 1200 / 1440);
+        --global-spacing--16px: calc(1rem * 1200 / 1440);
+        --global-spacing--20px: calc(1.25rem * 1200 / 1440);
+        --global-spacing--24px: calc(1.5rem * 1200 / 1440);
+        --global-spacing--32px: calc(2rem * 1200 / 1440);
+        --global-spacing--40px: calc(2.5rem * 1200 / 1440);
+        --global-spacing--48px: calc(3rem * 1200 / 1440);
+        --global-spacing--64px: calc(4rem * 1200 / 1440);
+        --global-spacing--72px: calc(4.5rem * 1200 / 1440);
+        --global-spacing--80px: calc(5rem * 1200 / 1440);
+        --global-spacing--120px: calc(7.5rem * 1200 / 1440);
+        --global-spacing--136px: calc(8.5rem * 1200 / 1440);
+        --global-spacing--global-right-128px: calc(8rem * 1200 / 1440);
+        --global-spacing--global-left-240px: calc(15rem * 1200 / 1440);
+    }
+}
+@media screen and (min-width: 1320px) {
+    :root {
+        --additional--big-cta: calc(18.75rem * 1320 / 1440);
+        --additional--modal-cont: calc(36rem * 1320 / 1440);
+        --additional--modal-img: calc(24rem * 1320 / 1440);
+        --additional--modal-wide: calc(42rem * 1320 / 1440);
+        --additional--circle-cta: calc(7.2rem * 1320 / 1440);
+        --additional--slider-cta: calc(3rem * 1320 / 1440);
+
+        --fonts--h1-24px: calc(1.5rem * 1320 / 1440);
+        --fonts--h2-30px: calc(1.875rem * 1320 / 1440);
+        --fonts--h3-18px: calc(1.125rem * 1320 / 1440);
+        --fonts--h4-16px: calc(1rem * 1320 / 1440);
+        --fonts--p-14px: calc(0.875rem * 1320 / 1440);
+        --fonts--circle-button: calc(0.75rem * 1320 / 1440);
+        --fonts--letter-space-2px: calc(0.125rem * 1320 / 1440);
+
+        --global-spacing--8px: calc(0.5rem * 1320 / 1440);
+        --global-spacing--12px: calc(0.75rem * 1320 / 1440);
+        --global-spacing--16px: calc(1rem * 1320 / 1440);
+        --global-spacing--20px: calc(1.25rem * 1320 / 1440);
+        --global-spacing--24px: calc(1.5rem * 1320 / 1440);
+        --global-spacing--32px: calc(2rem * 1320 / 1440);
+        --global-spacing--40px: calc(2.5rem * 1320 / 1440);
+        --global-spacing--48px: calc(3rem * 1320 / 1440);
+        --global-spacing--64px: calc(4rem * 1320 / 1440);
+        --global-spacing--72px: calc(4.5rem * 1320 / 1440);
+        --global-spacing--80px: calc(5rem * 1320 / 1440);
+        --global-spacing--120px: calc(7.5rem * 1320 / 1440);
+        --global-spacing--136px: calc(8.5rem * 1320 / 1440);
+        --global-spacing--global-right-128px: calc(8rem * 1320 / 1440);
+        --global-spacing--global-left-240px: calc(15rem * 1320 / 1440);
+    }
+}
+  @media screen and (min-width: 1600px) {
+    :root {
+        --additional--big-cta: calc(18.75rem * 1600 / 1440);
+        --additional--modal-cont: calc(36rem * 1600 / 1440);
+        --additional--modal-img: calc(24rem * 1600 / 1440);
+        --additional--modal-wide: calc(42rem * 1600 / 1440);
+        --additional--circle-cta: calc(7.2rem * 1600 / 1440);
+        --additional--slider-cta: calc(3rem * 1600 / 1440);
+
+        --fonts--h1-24px: calc(1.5rem * 1600 / 1440);
+        --fonts--h2-30px: calc(1.875rem * 1600 / 1440);
+        --fonts--h3-18px: calc(1.125rem * 1600 / 1440);
+        --fonts--h4-16px: calc(1rem * 1600 / 1440);
+        --fonts--p-14px: calc(0.875rem * 1600 / 1440);
+        --fonts--circle-button: calc(0.75rem * 1600 / 1440);
+        --fonts--letter-space-2px: calc(0.125rem * 1600 / 1440);
+
+        --global-spacing--8px: calc(0.5rem * 1600 / 1440);
+        --global-spacing--12px: calc(0.75rem * 1600 / 1440);
+        --global-spacing--16px: calc(1rem * 1600 / 1440);
+        --global-spacing--20px: calc(1.25rem * 1600 / 1440);
+        --global-spacing--24px: calc(1.5rem * 1600 / 1440);
+        --global-spacing--32px: calc(2rem * 1600 / 1440);
+        --global-spacing--40px: calc(2.5rem * 1600 / 1440);
+        --global-spacing--48px: calc(3rem * 1600 / 1440);
+        --global-spacing--64px: calc(4rem * 1600 / 1440);
+        --global-spacing--72px: calc(4.5rem * 1600 / 1440);
+        --global-spacing--80px: calc(5rem * 1600 / 1440);
+        --global-spacing--120px: calc(7.5rem * 1600 / 1440);
+        --global-spacing--136px: calc(8.5rem * 1600 / 1440);
+        --global-spacing--global-right-128px: calc(8rem * 1600 / 1440);
+        --global-spacing--global-left-240px: calc(15rem * 1600 / 1440);
+    }
+}
+@media screen and (min-width: 1920px) {
+    :root {
+        --additional--big-cta: calc(18.75rem * 1920 / 1440);
+        --additional--modal-cont: calc(36rem * 1920 / 1440);
+        --additional--modal-img: calc(24rem * 1920 / 1440);
+        --additional--modal-wide: calc(42rem * 1920 / 1440);
+        --additional--circle-cta: calc(7.2rem * 1920 / 1440);
+        --additional--slider-cta: calc(3rem * 1920 / 1440);
+
+        --fonts--h1-24px: calc(1.5rem * 1920 / 1440);
+        --fonts--h2-30px: calc(1.875rem * 1920 / 1440);
+        --fonts--h3-18px: calc(1.125rem * 1920 / 1440);
+        --fonts--h4-16px: calc(1rem * 1920 / 1440);
+        --fonts--p-14px: calc(0.875rem * 1920 / 1440);
+        --fonts--circle-button: calc(0.75rem * 1920 / 1440);
+        --fonts--letter-space-2px: calc(0.125rem * 1920 / 1440);
+
+        --global-spacing--8px: calc(0.5rem * 1920 / 1440);
+        --global-spacing--12px: calc(0.75rem * 1920 / 1440);
+        --global-spacing--16px: calc(1rem * 1920 / 1440);
+        --global-spacing--20px: calc(1.25rem * 1920 / 1440);
+        --global-spacing--24px: calc(1.5rem * 1920 / 1440);
+        --global-spacing--32px: calc(2rem * 1920 / 1440);
+        --global-spacing--40px: calc(2.5rem * 1920 / 1440);
+        --global-spacing--48px: calc(3rem * 1920 / 1440);
+        --global-spacing--64px: calc(4rem * 1920 / 1440);
+        --global-spacing--72px: calc(4.5rem * 1920 / 1440);
+        --global-spacing--80px: calc(5rem * 1920 / 1440);
+        --global-spacing--120px: calc(7.5rem * 1920 / 1440);
+        --global-spacing--136px: calc(8.5rem * 1920 / 1440);
+        --global-spacing--global-right-128px: calc(8rem * 1920 / 1440);
+        --global-spacing--global-left-240px: calc(15rem * 1920 / 1440);
+        
+    }
+}
+
+@media screen and (min-width: 2400px) {
+    :root {
+        --additional--big-cta: calc(18.75rem * 2400 / 1440);
+        --additional--modal-cont: calc(36rem * 2400 / 1440);
+        --additional--modal-img: calc(24rem * 2400 / 1440);
+        --additional--modal-wide: calc(42rem * 2400 / 1440);
+        --additional--circle-cta: calc(7.2rem * 2400 / 1440);
+        --additional--slider-cta: calc(3rem * 2400 / 1440);
+
+        --fonts--h1-24px: calc(1.5rem * 2400 / 1440);
+        --fonts--h2-24px: calc(1.875rem * 2400 / 1440);
+        --fonts--h3-18px: calc(1.125rem * 2400 / 1440);
+        --fonts--h4-16px: calc(1rem * 2400 / 1440);
+        --fonts--p-14px: calc(0.875rem * 2400 / 1440);
+        --fonts--circle-button: calc(0.75rem * 2400 / 1440);
+        --fonts--letter-space-2px: calc(0.125rem * 2400 / 1440);        
+
+        --global-spacing--8px: calc(0.5rem * 2400 / 1440);
+        --global-spacing--12px: calc(0.75rem * 2400 / 1440);
+        --global-spacing--16px: calc(1rem * 2400 / 1440);
+        --global-spacing--20px: calc(1.25rem * 2400 / 1440);
+        --global-spacing--24px: calc(1.5rem * 2400 / 1440);
+        --global-spacing--32px: calc(2rem * 2400 / 1440);
+        --global-spacing--40px: calc(2.5rem * 2400 / 1440);
+        --global-spacing--48px: calc(3rem * 2400 / 1440);
+        --global-spacing--64px: calc(4rem * 2400 / 1440);
+        --global-spacing--72px: calc(4.5rem * 2400 / 1440);
+        --global-spacing--80px: calc(5rem * 2400 / 1440);
+        --global-spacing--120px: calc(7.5rem * 2400 / 1440);
+        --global-spacing--136px: calc(8.5rem * 2400 / 1440);
+        --global-spacing--global-right-128px: calc(8rem * 2400 / 1440);
+        --global-spacing--global-left-240px: calc(15rem * 2400 / 1440);
+    }
+}
